@@ -8,8 +8,4 @@ public class Orange extends Fruit {
     public Orange(int weight) {
         super(weight);
     }
-
-    public FruitType getType() {
-        return FruitType.Orange;
-    }
 }

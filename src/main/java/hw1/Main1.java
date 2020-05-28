@@ -55,13 +55,20 @@ public class Main1 {
         Box<Apple> appleBox2 = new Box<Apple>();
         appleBox2.putFruit(new Apple());
         appleBox2.putFruit(new Apple());
-        System.out.println(appleBox1.compare(appleBox2));
+        appleBox2.putFruit(new Apple());
+        System.out.println(appleBox1.compare(appleBox2));//true
+        appleBox2.takeFruit();
+        System.out.println(appleBox1.compare(appleBox2));//false
         Box<Orange> orangeBox1 = new Box<Orange>();
         orangeBox1.putFruit(new Orange());
         orangeBox1.putFruit(new Orange());
-        //appleBox1.pourFruits(appleBox2);//не разобрался, как проверить принадлежность коробки к конкретному типу фруктов
-        System.out.println(appleBox1.getWeight());
-        System.out.println(appleBox2.getWeight());
+        System.out.println(orangeBox1.compare(appleBox1));//true
+        System.out.println(appleBox1.pourFruits(orangeBox1));//false
+        System.out.println(appleBox1.getWeight());//3
+        System.out.println(orangeBox1.getWeight());//3
+        System.out.println(appleBox1.pourFruits(appleBox2));//true
+        System.out.println(appleBox1.getWeight());//0
+        System.out.println(appleBox2.getWeight());//5
         System.out.println("----------------");
     }
 }

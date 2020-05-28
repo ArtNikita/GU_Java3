@@ -8,8 +8,4 @@ public class Apple extends Fruit {
     public Apple() {
         super(1);
     }
-
-    public FruitType getType() {
-        return FruitType.Apple;
-    }
 }
